@@ -49,6 +49,7 @@ setuptools.setup(
     name="zyrous-redis",
     version=parsed_toml['tool']['commitizen']['version'],
     author="Tapan Parmar",
+    namespace_packages=["zyrous"],
     author_email="tapan.parmar@zyrous.com",
     long_description_content_type='text/markdown',
     long_description=read_me_description,
