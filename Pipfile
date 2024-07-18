@@ -4,8 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-strawberry-graphql = {extras = ["fastapi"], version = "*"}
-redis = {extras = ["hiredis"], version = "*"}
 
 [dev-packages]
 twine = "*"
