@@ -17,6 +17,8 @@ setuptools.setup(
     package_dir={"": "src"},
     entry_points={"zyrous_plugins": ["zredis = zyrous.zredis"]},
     packages=setuptools.find_packages(where="src"),
-    install_requires=[],
+    install_requires=[
+         "redis[hiredis]",
+    ],
     keywords=["redis", "repository"],
 )
