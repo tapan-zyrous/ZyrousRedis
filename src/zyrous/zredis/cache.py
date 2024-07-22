@@ -47,6 +47,11 @@ class RedisCache(Generic[TDomain], AbstractCache[Any, TDomain]):
         self._item_ttl = cache_ttl or int(os.getenv('CACHE_TTL', '600'))
         self._item_prefix = f'{item_type.__module__}.{item_type.__name__}'
 
+        logging.error(redis_db)
+        logging.error(redis_port)
+        logging.error(redis_password)
+        logging.error(redis_username)
+
     def get(self, key: Any) -> Optional[asyncio.Future[TDomain]]:
         try:
             value = self._redis.get(self._get_cache_key(key))
